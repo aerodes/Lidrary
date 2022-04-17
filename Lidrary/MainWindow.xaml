@@ -1,0 +1,21 @@
+﻿<Window x:Class="Lidrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lidrary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*" MaxHeight="60" MinHeight="60"/>
+            <RowDefinition Height="380*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#FF2D2D30"/>
+        <Rectangle Grid.Row="1" Fill="#FF1A1A1A"/>
+        <Button Name="btnBack" Content="Назад" Style="{StaticResource btnStyle}" 
+                Margin="0,5,5,5" HorizontalAlignment="Right" 
+                Height="Auto" Click="btnBack_Click" />
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
